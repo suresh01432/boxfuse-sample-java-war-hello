@@ -14,9 +14,11 @@
 		<sonar.host.url>http://52.66.95.10:9000/</sonar.host.url>
 		<java.version>11</java.version>
                 <maven.compiler.source>${java.version}</maven.compiler.source>
-                <maven.compiler.target>${java.version}</maven.compiler.target>
-
-	</properties>
+                <maven.compiler.target>${java.version}</maven.compiler.target> 
+                <sonar.login>admin</sonar.login>
+        	<sonar.password>nayak</sonar.password>
+	
+	 </properties>
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -28,9 +30,9 @@
     <build>
         <plugins>
 		<plugin>
-                  <groupId>org.codehaus.mojo</groupId>
+                  <groupId>org.sonarsource.scanner.maven</groupId>
                   <artifactId>sonar-maven-plugin</artifactId>
-                  <version>3.0.2</version>
+                  <version>latest-version</version>
                 </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
